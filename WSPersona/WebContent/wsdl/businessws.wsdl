@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="BusinessWSService" targetNamespace="http://businessDelegateWS.presentation.usbcali.edu.co/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://businessDelegateWS.presentation.usbcali.edu.co/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+  <import namespace="http://businessDelegateWS.presentation.usbcali.edu.co/" schemaLocation="businessws_schema1.xsd"/>
+</schema>
+  </wsdl:types>
+  <wsdl:message name="guardarPersona">
+    <wsdl:part name="parameters" element="tns:guardarPersona">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="borrarPersona">
+    <wsdl:part name="parameters" element="tns:borrarPersona">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="borrarPersonaResponse">
+    <wsdl:part name="parameters" element="tns:borrarPersonaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="Exception">
+    <wsdl:part name="Exception" element="tns:Exception">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarPersona">
+    <wsdl:part name="parameters" element="tns:consultarPersona">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="guardarPersonaResponse">
+    <wsdl:part name="parameters" element="tns:guardarPersonaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="consultarPersonaResponse">
+    <wsdl:part name="parameters" element="tns:consultarPersonaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificarPersonaResponse">
+    <wsdl:part name="parameters" element="tns:modificarPersonaResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="modificarPersona">
+    <wsdl:part name="parameters" element="tns:modificarPersona">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ListaPersonas">
+    <wsdl:part name="parameters" element="tns:ListaPersonas">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ListaPersonasResponse">
+    <wsdl:part name="parameters" element="tns:ListaPersonasResponse">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="BusinessWS">
+    <wsdl:operation name="ListaPersonas">
+      <wsdl:input name="ListaPersonas" message="tns:ListaPersonas">
+    </wsdl:input>
+      <wsdl:output name="ListaPersonasResponse" message="tns:ListaPersonasResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="guardarPersona">
+      <wsdl:input name="guardarPersona" message="tns:guardarPersona">
+    </wsdl:input>
+      <wsdl:output name="guardarPersonaResponse" message="tns:guardarPersonaResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="borrarPersona">
+      <wsdl:input name="borrarPersona" message="tns:borrarPersona">
+    </wsdl:input>
+      <wsdl:output name="borrarPersonaResponse" message="tns:borrarPersonaResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPersona">
+      <wsdl:input name="consultarPersona" message="tns:consultarPersona">
+    </wsdl:input>
+      <wsdl:output name="consultarPersonaResponse" message="tns:consultarPersonaResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modificarPersona">
+      <wsdl:input name="modificarPersona" message="tns:modificarPersona">
+    </wsdl:input>
+      <wsdl:output name="modificarPersonaResponse" message="tns:modificarPersonaResponse">
+    </wsdl:output>
+      <wsdl:fault name="Exception" message="tns:Exception">
+    </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BusinessWSServiceSoapBinding" type="tns:BusinessWS">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ListaPersonas">
+      <soap:operation soapAction="urn:ListaPersonas" style="document"/>
+      <wsdl:input name="ListaPersonas">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="ListaPersonasResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="borrarPersona">
+      <soap:operation soapAction="urn:BorrarPersona" style="document"/>
+      <wsdl:input name="borrarPersona">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="borrarPersonaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="guardarPersona">
+      <soap:operation soapAction="urn:GuardarPersona" style="document"/>
+      <wsdl:input name="guardarPersona">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="guardarPersonaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="consultarPersona">
+      <soap:operation soapAction="urn:ConsultarPersona" style="document"/>
+      <wsdl:input name="consultarPersona">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="consultarPersonaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modificarPersona">
+      <soap:operation soapAction="urn:ModificarPersona" style="document"/>
+      <wsdl:input name="modificarPersona">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="modificarPersonaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="Exception">
+        <soap:fault name="Exception" use="literal"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BusinessWSService">
+    <wsdl:port name="BusinessWSPort" binding="tns:BusinessWSServiceSoapBinding">
+      <soap:address location="http://localhost:8787/WSPersona/services/BusinessWSPort"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

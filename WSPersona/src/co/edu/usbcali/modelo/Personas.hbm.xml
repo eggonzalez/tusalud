@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 30/03/2014 11:58:29 AM by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="co.edu.usbcali.modelo.Personas" table="PERSONAS" schema="EGGONZALEZ">
+        <id name="idPersona" type="java.lang.Long">
+            <column name="ID_PERSONA" precision="15" scale="0" />
+            <generator class="assigned" />
+        </id>
+        <property name="primerNombre" type="java.lang.String">
+            <column name="PRIMER_NOMBRE" length="15" not-null="true" />
+        </property>
+        <property name="segundoNombre" type="java.lang.String">
+            <column name="SEGUNDO_NOMBRE" length="15" />
+        </property>
+        <property name="primerApellido" type="java.lang.String">
+            <column name="PRIMER_APELLIDO" length="15" not-null="true" />
+        </property>
+        <property name="segundoApellido" type="java.lang.String">
+            <column name="SEGUNDO_APELLIDO" length="15" />
+        </property>
+        <property name="fechaNacimiento" type="java.util.Date">
+            <column name="FECHA_NACIMIENTO" length="7" not-null="true" />
+        </property>
+        <property name="genero" type="java.lang.String">
+            <column name="GENERO" length="1" not-null="true" />
+        </property>
+        <property name="profesion" type="java.lang.String">
+            <column name="PROFESION" length="30" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

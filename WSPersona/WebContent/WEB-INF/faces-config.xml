@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config version="2.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+
+	<managed-bean>
+		<managed-bean-name>chartBean</managed-bean-name>
+		<managed-bean-class>co.edu.usbcali.presentation.backingBeans.ChartBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>personasView</managed-bean-name>
+		<managed-bean-class>co.edu.usbcali.presentation.backingBeans.PersonasView</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+	</managed-bean>
+	<navigation-rule>
+		<from-view-id>/XHTML/personas.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>goInitialMenu</from-outcome>
+			<to-view-id>/XHTML/initialMenu.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/XHTML/personasListDataTable.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>goInitialMenu</from-outcome>
+			<to-view-id>/XHTML/initialMenu.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/XHTML/personasListDataTableEditable.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>goInitialMenu</from-outcome>
+			<to-view-id>/XHTML/initialMenu.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/XHTML/initialMenu.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>goPersonas</from-outcome>
+			<to-view-id>/XHTML/personas.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/XHTML/initialMenu.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>goPersonasListDataTable</from-outcome>
+			<to-view-id>/XHTML/personasListDataTable.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/XHTML/initialMenu.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>goPersonasListDataTableEditable</from-outcome>
+			<to-view-id>/XHTML/personasListDataTableEditable.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+	</navigation-rule>
+</faces-config>

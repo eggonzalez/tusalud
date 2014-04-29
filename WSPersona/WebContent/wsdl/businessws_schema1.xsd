@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:tns="http://businessDelegateWS.presentation.usbcali.edu.co/" xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://businessDelegateWS.presentation.usbcali.edu.co/">
+  <xs:element name="ListaPersonas" type="tns:ListaPersonas"/>
+  <xs:element name="ListaPersonasResponse" type="tns:ListaPersonasResponse"/>
+  <xs:element name="borrarPersona" type="tns:borrarPersona"/>
+  <xs:element name="borrarPersonaResponse" type="tns:borrarPersonaResponse"/>
+  <xs:element name="consultarPersona" type="tns:consultarPersona"/>
+  <xs:element name="consultarPersonaResponse" type="tns:consultarPersonaResponse"/>
+  <xs:element name="guardarPersona" type="tns:guardarPersona"/>
+  <xs:element name="guardarPersonaResponse" type="tns:guardarPersonaResponse"/>
+  <xs:element name="modificarPersona" type="tns:modificarPersona"/>
+  <xs:element name="modificarPersonaResponse" type="tns:modificarPersonaResponse"/>
+  <xs:complexType name="ListaPersonas">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="ListaPersonasResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="guardarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identificacion" type="xs:long"/>
+      <xs:element minOccurs="0" name="primerNombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="segundoNombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="primerApellido" type="xs:string"/>
+      <xs:element minOccurs="0" name="segundoApellido" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:string"/>
+      <xs:element minOccurs="0" name="genero" type="xs:string"/>
+      <xs:element minOccurs="0" name="profesion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="guardarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="borrarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identificacion" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="borrarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identificacion" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="consultarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPersona">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identificacion" type="xs:long"/>
+      <xs:element minOccurs="0" name="primerNombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="segundoNombre" type="xs:string"/>
+      <xs:element minOccurs="0" name="primerApellido" type="xs:string"/>
+      <xs:element minOccurs="0" name="segundoApellido" type="xs:string"/>
+      <xs:element minOccurs="0" name="fechaNacimiento" type="xs:string"/>
+      <xs:element minOccurs="0" name="genero" type="xs:string"/>
+      <xs:element minOccurs="0" name="profesion" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="modificarPersonaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
